@@ -9,12 +9,12 @@ Build a timed code quiz with multiple-choice questions. This app will run in the
 
 # Details
 - Click the start button to take a quiz.
-- Timer starts and simultaneously questions get presented.
+- Timer starts and simultaneously questions gets presented.
 - Once started answering the question,presented with next question.
 - For wrong answers time is subtracted from the clock.
-- Once all the questions are answered or timer reaches 0 quiz stops.
+- Once all the questions are answered or timer reaches 0, quiz stops.
 - Final score displays on the screen.
 - User can enter his/her initials to store the score.
-- Also displays high score stored in the local storage.
+- Also displays high score.
 - User can clear the highscore, goback and start the quiz again.
 - High score can be seen through view highscore button.
