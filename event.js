@@ -156,7 +156,7 @@ function exitCondition() {
     finalScore.innerHTML = "Your final score is " + correctAnswers;
 }
 
-//function to enable and disble the final score since all the contents are written in single html 
+//function for enable and disble the final score since all the contents are written in single html 
 function enabledisbleScore(value) {
     if (value) {
         document.getElementById('finalScore').style.display = "block";
@@ -172,6 +172,7 @@ function enabledisbleScore(value) {
     }
 }
 
+//function for enable and disble the question and answers
 function enabledisableQA(value) {
     if (value) {
 
@@ -190,6 +191,7 @@ function enabledisableQA(value) {
     }
 }
 
+//function for enable and disable the high score
 function enabledisableHighscore(value) {
     if (value) {
         document.getElementById('highScore').style.display = "block";
@@ -203,26 +205,23 @@ function enabledisableHighscore(value) {
     }
 }
 
-
+//callig all enable disable functions
 enabledisableQA(false);
 enabledisbleScore(false);
 enabledisableHighscore(false);
 
+//added event listener for start quiz button
 startQuiz.addEventListener("click", startQuiz1);
-
 for (var i = 0; i < answers.length; i++) {
     answers[i].addEventListener("click", answers1);
 }
-
-
 var userText = "";
-
 btnSubmit.addEventListener("click", function (e) {
     e.preventDefault()
     showHighscore();
-
 })
 
+//function to show highscore
 function showHighscore() {
     wrongAnswer.style.display = "none";
     startQuiz.style.display = "none";
@@ -246,6 +245,7 @@ function showHighscore() {
     enabledisableHighscore(true);
 }
 
+//added event listener for clear highscore button
 clearHs.addEventListener("click", function (e) {
     e.preventDefault()
     clearHsClicked = true;
@@ -254,6 +254,7 @@ clearHs.addEventListener("click", function (e) {
     showHighscore();
 })
 
+//added event listener for goback button
 goBack.addEventListener("click", function (e) {
     e.preventDefault()
     clearHsClicked = false;
@@ -269,6 +270,7 @@ goBack.addEventListener("click", function (e) {
     currentCounter = 0;
 })
 
+//added event listener for view highscore button
 viewHs.addEventListener("click", function (e) {
     e.preventDefault()
     secondsLeft = 0;
