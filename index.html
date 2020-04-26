@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Code Quiz</title>
+</head>
+
+<nav class="navbar navbar-expand-md navbar-light bg-primary">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link active" href=""><button id="viewHs" class="btn btn-primary">View
+                    Highscore</button></a>
+        </div>
+    </div>
+
+
+    <div>
+        <p class="time" style="color: white;">Time:</p>
+        <div id="main"></div>
+    </div>
+</nav>
+
+<body>
+
+    <div class="container">
+        <div id="startPage">
+            <h3>Coding Quiz Challenge</h3>
+            <p>Try to answer the following code-related questions within</p>
+            <p>the time limit.Keep in mind that incorrect answers </p>
+            <p>will penalize your scoretime by ten seconds</p>
+            <!--button id="startQuiz" onclick="location.href='./quiz.html'">Start Quiz</button-->
+            <button id="startQuiz" class="btn btn-primary">Start Quiz</button>
+        </div>
+
+        <div>
+            <h3 id="question"></h3>
+            <div class="row">
+                <div class="btn-group-vertical">
+                    <button id="choice_A" class="answers btn btn-primary"></button>
+
+
+                    <button id="choice_B" class="answers btn btn-primary"></button>
+
+
+                    <button id="choice_C" class="answers btn btn-primary"></button>
+
+
+                    <button id="choice_D" class="answers btn btn-primary"></button>
+                </div>
+            </div>
+            <div class="row">
+                <p id="wrongAnswer"></p>
+            </div>
+
+
+            <div>
+                <h2 id="done">All done!!!</h2>
+                <h5 id="finalScore">Your final score is: </h5>
+                <form>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <input id="initial" type="text" style="display: inline;" placeholder="enter initial here" />
+                        </div>
+                        <div class="col-md-4">
+                            <input id="btnSubmit" class="btn btn-primary" style="display: inline;" type="submit"
+                                value="Submit" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <h2 id="highScore">HighScore </h2>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input id="goBack" class="btn btn-primary" type="button" value="Go Back">
+                    </div>
+                    <div class="col-sm-6">
+                        <input id="clearHs" class="btn btn-primary" type="submit" value="Clear Highscores">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.slim.js"
+        integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE=" crossorigin="anonymous"></script>
+    <script src="event.js"></script>
+</body>
+
+</html>
