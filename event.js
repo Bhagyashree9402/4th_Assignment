@@ -1,3 +1,4 @@
+// all button ids are declared
 var startQuiz = document.querySelector("#startQuiz");
 var answers = document.getElementsByClassName("answers");
 var question = document.querySelector("#question");
@@ -19,6 +20,7 @@ var timeEl = document.querySelector(".time");
 var mainEl = document.querySelector("#main");
 var secondsLeft = 60;
 
+//function for timer
 function setTime() {
     var timeInterval = setInterval(function () {
         if (secondsLeft > 0) {
@@ -40,6 +42,7 @@ function setTime() {
 
 let currentCounter = 0;
 
+//questions and answers are declared in the array
 let questions = [
     {
         question: "What does DOM stands for ?",
