@@ -99,7 +99,7 @@ let questions = [
     },
 ];
 
-
+//function for the starting the quiz
 function startQuiz1() {
     console.log("startquiz is " + startQuiz.textContent);
     console.log("questions  is " + questions[currentCounter].question);
@@ -117,6 +117,7 @@ function startQuiz1() {
 
 }
 
+//function for answers
 function answers1(e) {
     e.preventDefault();
     console.log("answers is " + this.textContent);
@@ -127,15 +128,11 @@ function answers1(e) {
     }
     else {
         secondsLeft = secondsLeft - 10;
-
-
         wrongAnswer.innerHTML = "wrong answer";
         if (secondsLeft < 0) {
             currentCounter = questions.length - 1;
         }
     }
-
-
 
     if (currentCounter == (questions.length - 1)) {
         exitCondition();
@@ -149,6 +146,7 @@ function answers1(e) {
     }
 }
 
+//exitcondition function 
 function exitCondition() {
     secondsLeft = 0;
     enabledisbleScore(true);
@@ -158,6 +156,7 @@ function exitCondition() {
     finalScore.innerHTML = "Your final score is " + correctAnswers;
 }
 
+//function to enable and disble the final score since all the contents are written in single html 
 function enabledisbleScore(value) {
     if (value) {
         document.getElementById('finalScore').style.display = "block";
