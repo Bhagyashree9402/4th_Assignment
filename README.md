@@ -16,4 +16,5 @@ Build a timed code quiz with multiple-choice questions. This app will run in the
 - Final score displays on the screen.
 - User can enter his/her initials to store the score.
 - Also displays high score stored in the local storage.
-- User can clear the highscore and goback to the start the quiz again.
+- User can clear the highscore, goback and start the quiz again.
+- High score can be seen through view highscore button.
