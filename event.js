@@ -236,9 +236,9 @@ function showHighscore() {
             window.localStorage.setItem(initial.value, correctAnswers);
 
         }
-        highScore.innerHTML = "High Score is " + window.localStorage.getItem(window.localStorage.key(0));
+        highScore.innerHTML = "User initials:Highscore = " + window.localStorage.key(0) + ":" + window.localStorage.getItem(window.localStorage.key(0));
     } else {
-        highScore.innerHTML = "High Score is " + window.localStorage.length;
+        highScore.innerHTML = "High Score is: " + window.localStorage.length;
     }
 
     enabledisbleScore(false);
